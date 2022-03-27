@@ -17,7 +17,7 @@ We are an online book store. We receive book orders from customers and process t
 - **Create a new Order**:
   - The application receives orders in a JSON format through an HTTP API endpoint (POST).
   - Orders contain a list of books and the quantity.
-  - Before registering the order, the system should check if there's enough stock to fulfill the order (`import.sql` will set the initial stock).
+  - Before registering the order, the system should check if there's enough stock to fulfill the order (`data.sql` will set the initial stock).
   - If one of the books in the order does not have enough stock we will reject the entire order.
   - After stock validation, the order is marked as a success, and it would return a Unique Order Identifier to the caller of the HTTP API endpoint.
   - If the order was processed we need to update available stock, taking into consideration:
