@@ -158,3 +158,5 @@ INSERT INTO book_stock
 VALUES ('92259b63-2440-4782-9855-25d359d75590', 'do laboris Lorem irure mollit', 1);
 INSERT INTO book_stock
 VALUES ('7916a830-0e9b-4aab-8982-f55d76c6a156', 'et eu magna id excepteur', 4);
+INSERT INTO orders
+VALUES('7916a830-0e9b-4aab-8982-f55d76c6a189', '7916a830-0e9b-4aab-8982-f55d76c6a156', 3);
