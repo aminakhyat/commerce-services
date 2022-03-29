@@ -12,8 +12,7 @@ import static java.util.stream.Collectors.groupingBy;
 
 public class H2OrderRepository implements OrderRepository {
 
-    private JPAOrderRepository jpaOrderRepository;
-
+    private final JPAOrderRepository jpaOrderRepository;
 
     public H2OrderRepository(JPAOrderRepository jpaOrderRepository) {
         this.jpaOrderRepository = jpaOrderRepository;
