@@ -4,8 +4,12 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class OrderId implements Serializable {
+
     private String orderId;
     private String bookId;
+
+    public OrderId() {
+    }
 
     public OrderId(String orderId, String bookId) {
         this.orderId = orderId;

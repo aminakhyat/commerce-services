@@ -1,16 +1,16 @@
 package com.adobe.bookstore.application.createorder;
 
-import java.util.Map;
+import java.util.List;
 
 public class CreateOrderRequest {
 
-    private final Map<String, Integer> books;
+    private final List<BookRequest> books;
 
-    public Map<String, Integer> getBooks() {
+    public List<BookRequest> getBooks() {
         return books;
     }
 
-    public CreateOrderRequest(Map<String, Integer> books) {
+    public CreateOrderRequest(List<BookRequest> books) {
         this.books = books;
     }
 }

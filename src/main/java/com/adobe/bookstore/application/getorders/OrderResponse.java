@@ -1,13 +1,13 @@
 package com.adobe.bookstore.application.getorders;
 
-import java.util.Map;
+import java.util.List;
 
 public class OrderResponse {
 
     private final String id;
-    private final Map<String, Integer> books;
+    private final List<BookResponse> books;
 
-    public OrderResponse(String id, Map<String, Integer> books) {
+    public OrderResponse(String id, List<BookResponse> books) {
         this.id = id;
         this.books = books;
     }
@@ -16,7 +16,7 @@ public class OrderResponse {
         return id;
     }
 
-    public Map<String, Integer> getBooks() {
+    public List<BookResponse> getBooks() {
         return books;
     }
 }

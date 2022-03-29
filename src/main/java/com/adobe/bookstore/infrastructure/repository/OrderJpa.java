@@ -30,7 +30,6 @@ public class OrderJpa implements Serializable {
     }
 
     public OrderJpa() {
-
     }
 
     public String getOrderId() {

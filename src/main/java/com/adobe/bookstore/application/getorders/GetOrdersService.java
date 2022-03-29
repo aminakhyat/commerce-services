@@ -15,7 +15,13 @@ public class GetOrdersService {
         return new GetOrdersResponse(
                 this.orderRepository.findAll()
                         .stream()
-                        .map(o -> new OrderResponse(o.getId(), o.getBooks()))
+                        .map(o -> new OrderResponse(
+                                o.getId(),
+                                o.getBooks().stream()
+                                        .map(b-> new BookResponse(b.getBookId(), b.getQuantity()))
+                                        .collect(Collectors.toList())
+                                )
+                        )
                         .collect(Collectors.toList())
         );
     }

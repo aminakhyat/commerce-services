@@ -1,13 +1,13 @@
 package com.adobe.bookstore.domain;
 
-import java.util.Map;
+import java.util.List;
 
 public class Order {
 
     private final String id;
-    private final Map<String, Integer> books;
+    private final List<BookOrder> books;
 
-    public Order(String id, Map<String, Integer> books) {
+    public Order(String id, List<BookOrder> books) {
         this.id = id;
         this.books = books;
     }
@@ -16,7 +16,7 @@ public class Order {
         return id;
     }
 
-    public Map<String, Integer> getBooks() {
+    public List<BookOrder>  getBooks() {
         return books;
     }
 }

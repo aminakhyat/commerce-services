@@ -1,13 +1,13 @@
 package com.adobe.bookstore.infrastructure.controller.getorders;
 
-import java.util.Map;
+import java.util.List;
 
 public class HttpOrderResponse {
 
     private final String id;
-    private final Map<String, Integer> books;
+    private final List<HttpBookResponse> books;
 
-    public HttpOrderResponse(String id, Map<String, Integer> books) {
+    public HttpOrderResponse(String id, List<HttpBookResponse> books) {
         this.id = id;
         this.books = books;
     }
@@ -16,7 +16,7 @@ public class HttpOrderResponse {
         return id;
     }
 
-    public Map<String, Integer> getBooks() {
+    public List<HttpBookResponse>getBooks() {
         return books;
     }
 }

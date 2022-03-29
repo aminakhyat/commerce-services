@@ -19,7 +19,13 @@ public class GetOrdersControllerResponse {
 
     public static GetOrdersControllerResponse mapFrom(GetOrdersResponse getOrdersResponse) {
         return new GetOrdersControllerResponse(getOrdersResponse.getOrders().stream()
-                .map(o -> new HttpOrderResponse(o.getId(), o.getBooks()))
+                .map(o -> new HttpOrderResponse(
+                        o.getId(),
+                        o.getBooks()
+                                .stream()
+                                .map(b-> new HttpBookResponse(b.getBookId(), b.getQuantity()))
+                                .collect(Collectors.toList()))
+                )
                 .collect(Collectors.toList()));
     }
 }
