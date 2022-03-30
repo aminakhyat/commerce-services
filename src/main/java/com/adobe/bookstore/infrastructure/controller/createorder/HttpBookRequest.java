@@ -1,6 +1,7 @@
 package com.adobe.bookstore.infrastructure.controller.createorder;
 
 public class HttpBookRequest {
+
     private String bookId;
     private int quantity;
 

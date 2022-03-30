@@ -3,6 +3,7 @@ package com.adobe.bookstore.application.getorders;
 import com.adobe.bookstore.domain.Order;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class GetOrdersResponse {
@@ -29,5 +30,18 @@ public class GetOrdersResponse {
                         )
                         .collect(Collectors.toList())
         );
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GetOrdersResponse that = (GetOrdersResponse) o;
+        return orders.equals(that.orders);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(orders);
     }
 }

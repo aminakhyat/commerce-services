@@ -1,5 +1,7 @@
 package com.adobe.bookstore.infrastructure.controller.getorders;
 
+import java.util.Objects;
+
 public class HttpBookResponse {
 
     private final String bookId;
@@ -16,5 +18,18 @@ public class HttpBookResponse {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HttpBookResponse that = (HttpBookResponse) o;
+        return quantity == that.quantity && bookId.equals(that.bookId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookId, quantity);
     }
 }

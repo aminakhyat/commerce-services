@@ -1,8 +1,11 @@
 package com.adobe.bookstore.domain;
 
+import java.util.Objects;
+
 public class BookOrder {
-    private String bookId;
-    private int quantity;
+
+    private final String bookId;
+    private final int quantity;
 
     public BookOrder(String bookId, int quantity) {
         this.bookId = bookId;
@@ -15,5 +18,18 @@ public class BookOrder {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookOrder bookOrder = (BookOrder) o;
+        return quantity == bookOrder.quantity && bookId.equals(bookOrder.bookId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookId, quantity);
     }
 }

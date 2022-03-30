@@ -3,6 +3,7 @@ package com.adobe.bookstore.application.createorder;
 import java.util.Objects;
 
 public class BookRequest {
+
     private final String bookId;
     private final int quantity;
 
